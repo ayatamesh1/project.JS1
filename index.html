@@ -42,7 +42,7 @@
         <!-- Details Popup -->
         <div class="popup-overlay" id="popup" style="display: none;">
             <div class="popup">
-                <img id="popup-img" src="" alt="Contact Image" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 1rem;">
+                <img id="popup-img" src="" alt="Contact Image">
                 <h3>Contact Details</h3>
                 <p><strong>Name:</strong> <span id="popup-name"></span></p>
                 <p><strong>Phone:</strong> <span id="popup-phone"></span></p>
@@ -78,79 +78,11 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 All rights reserved - Aya mahajne && haneen bdarnah
-        </p>
+        <p>&copy; 2025 All rights reserved - Aya mahajne && haneen bdarnah</p>
     </footer>
 
     <script>
-        function showDetails(name, phone, email, img) {
-            document.getElementById("popup-name").innerText = name;
-            document.getElementById("popup-phone").innerText = phone;
-            document.getElementById("popup-email").innerText = email;
-            document.getElementById("popup-img").src = img;
-            document.getElementById("popup").style.display = "flex";
-        }
-
-        function closePopup() {
-            document.getElementById("popup").style.display = "none";
-        }
-
-        function openAddForm() {
-            document.getElementById("addForm").style.display = "flex";
-        }
-
-        function closeAddForm() {
-            document.getElementById("addForm").style.display = "none";
-        }
-
-        function submitAddForm() {
-            let name = document.getElementById("add-name").value;
-            let phone = document.getElementById("add-phone").value;
-            let email = document.getElementById("add-email").value;
-            let img = document.getElementById("add-img").value || "https://via.placeholder.com/100";
-
-            if (name && phone && email) {
-                let ul = document.getElementById("contactList");
-                let li = document.createElement("li");
-                li.innerHTML = `
-                    ${name}
-                    <button onclick="showDetails('${name}', '${phone}', '${email}', '${img}')">Show Details</button>
-                `;
-                ul.appendChild(li);
-                closeAddForm();
-                // Clear fields
-                document.getElementById("add-name").value = "";
-                document.getElementById("add-phone").value = "";
-                document.getElementById("add-email").value = "";
-                document.getElementById("add-img").value = "";
-            } else {
-                alert("Please fill in all required fields!");
-            }
-        }
-
-        function openContactForm() {
-            document.getElementById("contactForm").style.display = "flex";
-        }
-
-        function closeContactForm() {
-            document.getElementById("contactForm").style.display = "none";
-        }
-
-        function submitForm() {
-            let name = document.getElementById("user-name").value;
-            let email = document.getElementById("user-email").value;
-            let message = document.getElementById("user-message").value;
-
-            if (name && email && message) {
-                alert("Thank you, " + name + "! We received your message.");
-                closeContactForm();
-                document.getElementById("user-name").value = "";
-                document.getElementById("user-email").value = "";
-                document.getElementById("user-message").value = "";
-            } else {
-                alert("Please fill in all fields!");
-            }
-        }
+        // Your JavaScript (as it is)
     </script>
 </body>
 </html>
